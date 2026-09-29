@@ -25,6 +25,8 @@ return (
     <Text style={{ fontSize: 30 }}>{contador}</Text>
     <Button title="+1" onPress={sumar} />
     <Button title="-1" onPress={restar}/>
+    {/* Too many re-renders. React limits the number of renders to prevent an infinite loop. 
+    Creo que pasa porque le estamos pasando la funcion por valor en lugar de por referencia */}
     <Button title="Reiniciar" onPress={reiniciar}/>
     </View>
 );
